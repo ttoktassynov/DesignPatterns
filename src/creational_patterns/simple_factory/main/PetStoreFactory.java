@@ -8,7 +8,7 @@ import creational_patterns.simple_factory.products.Parrot;
 public class PetStoreFactory implements AnimalFactory{
 
     @Override
-    public Animal orderPet(String petName, String petType) throws IllegalAccessException {
+    public Animal orderPet(String petName, String petType) {
         if (petType.equals("Dog")){
             return new Dog(petName);
         }

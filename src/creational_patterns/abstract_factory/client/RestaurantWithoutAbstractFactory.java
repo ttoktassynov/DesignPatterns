@@ -16,6 +16,10 @@ public class RestaurantWithoutAbstractFactory {
             this.menu = new KFCFoodMenu("KFC Menu Style");
             this.furniture = new KFCFurniture("KFC furniture");
         }
+        else if (foodChainType.equals("Rafe")){
+            this.menu = new RafeFoodMenu("Rafe Menu Style");
+            this.furniture = new RafeFurniture("Rafe furniture style");
+        }
         else {
             throw new IllegalArgumentException("Invalid chain type");
         }

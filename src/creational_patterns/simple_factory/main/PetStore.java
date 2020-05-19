@@ -14,17 +14,12 @@ public class PetStore {
     }
     public static void main(String[] args) {
         PetStore petStore = new PetStore(new PetStoreFactory());
-        try{
-            Animal pet = petStore.orderPet("Dollar", "Dog");
-            pet.makeSound();
-            pet.moveAround();
-        }
-        catch(IllegalArgumentException | IllegalAccessException ex){
-            System.out.println("There is no such animal in pet store");
-        }
+        Animal pet = petStore.orderPet("Dollar", "Dog");
+        pet.makeSound();
+        pet.moveAround();
     }
 
-    public Animal orderPet(String petName, String petType) throws IllegalAccessException {
-        return this.factory.orderPet(petName, petType);
+    public Animal orderPet(String petName, String petType) {
+        return factory.orderPet(petName, petType);
     }
 }

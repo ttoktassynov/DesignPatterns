@@ -9,6 +9,7 @@ public class KFCFoodChainFactory implements FoodChainFactory{
 
     @Override
     public FoodMenu createFoodMenu() {
+
         return new KFCFoodMenu("KFC Menu Style");
     }
 
