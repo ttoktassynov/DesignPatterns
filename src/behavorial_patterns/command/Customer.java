@@ -1,0 +1,35 @@
+package behavorial_patterns.command;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Customer {
+    private Invoker invoker;
+    private List<Command> commandList;
+    public static void main(String [] args){
+        Customer customer = new Customer();
+        customer.run();
+    }
+    public void run(){
+        commandList = new ArrayList<>();
+        Receiver receiver = new Light("Bedroom light");
+        Command command = new TurnOnCommand(receiver);
+        invoker = new Invoker(command);
+        commandList.add(command);
+        invoker.executeCommand();
+
+        Receiver receiver2 = new Light("Kitchen light");
+        Command command2 = new TurnOnCommand(receiver2);
+        commandList.add(command2);
+        invoker.setCommand(command2);
+        invoker.executeCommand();
+
+        System.out.println("Les's now undo all the command:");
+        for (Command curCommand : commandList){
+            invoker.setCommand(curCommand);
+            invoker.undoCommand();
+        }
+
+    }
+
+}

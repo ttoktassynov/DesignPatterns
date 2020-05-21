@@ -5,10 +5,8 @@ import creational_patterns.simple_factory.products.Cat;
 import creational_patterns.simple_factory.products.Dog;
 import creational_patterns.simple_factory.products.Parrot;
 
-public class PetStoreFactory implements AnimalFactory{
-
-    @Override
-    public Animal orderPet(String petName, String petType) {
+public class PetStoreHelper {
+    public static Animal orderPet(String petName, String petType){
         if (petType.equals("Cat")){
             return new Cat(petName);
         }

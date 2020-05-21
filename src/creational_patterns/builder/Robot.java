@@ -9,7 +9,28 @@ public class Robot {
     private String firearms;
     private String doors;
     private String sensors;
+    private String name;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Robot() {}
+    public Robot(String arms, String legs, String head, String sensors){
+        this.arms = arms;
+        this.legs = legs;
+        this.head = head;
+        this.sensors = sensors;
+    }
+    public Robot(String firearms, String wheels, String sensors){
+        this.firearms = firearms;
+        this.wheels = wheels;
+        this.sensors = sensors;
+    }
     public String getArms() {
         return arms;
     }
