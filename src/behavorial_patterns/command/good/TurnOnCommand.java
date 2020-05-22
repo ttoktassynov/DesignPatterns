@@ -1,7 +1,8 @@
-package behavorial_patterns.command;
+package behavorial_patterns.command.good;
 
 public class TurnOnCommand implements Command{
     private Receiver receiver;
+
     public TurnOnCommand(Receiver receiver){
         this.receiver = receiver;
     }

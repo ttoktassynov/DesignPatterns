@@ -1,7 +1,7 @@
-package behavorial_patterns.command;
+package behavorial_patterns.command.good;
 
 public class Invoker {
-    public Command command;
+    private Command command;
     public Invoker(Command command){
         this.command = command;
     }

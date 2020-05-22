@@ -1,17 +1,18 @@
-package behavorial_patterns.command;
+package behavorial_patterns.command.good;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Customer {
+public class CustomerDemo {
     private Invoker invoker;
     private List<Command> commandList;
     public static void main(String [] args){
-        Customer customer = new Customer();
+        CustomerDemo customer = new CustomerDemo();
         customer.run();
     }
     public void run(){
         commandList = new ArrayList<>();
+
         Receiver receiver = new Light("Bedroom light");
         Command command = new TurnOnCommand(receiver);
         invoker = new Invoker(command);

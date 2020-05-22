@@ -1,4 +1,4 @@
-package behavorial_patterns.command;
+package behavorial_patterns.command.good;
 
 public class TurnOffCommand implements Command{
     private Receiver receiver;

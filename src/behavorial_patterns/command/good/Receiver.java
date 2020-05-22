@@ -1,4 +1,4 @@
-package behavorial_patterns.command;
+package behavorial_patterns.command.good;
 
 public abstract class Receiver {
     private String name;
