@@ -1,6 +1,6 @@
-package behavorial_patterns.visitor;
+package behavorial_patterns.visitor.bad;
 
-public class Piece extends ChessComponent{
+public class Piece extends ChessComponent {
     private String color;
 
     public String getColor() {
@@ -17,7 +17,8 @@ public class Piece extends ChessComponent{
     }
 
     @Override
-    public void accept(Visitor visitor) {
-        visitor.visit(this);
+    public void visit() {
+        System.out.println("This is a piece of type = " + this.getName() +
+                " with color = " + this.getColor());
     }
 }

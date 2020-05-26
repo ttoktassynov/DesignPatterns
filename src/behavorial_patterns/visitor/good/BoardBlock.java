@@ -1,8 +1,16 @@
-package behavorial_patterns.visitor;
+package behavorial_patterns.visitor.good;
 
 public class BoardBlock extends ChessComponent{
     private String color;
     private Piece piece;
+
+    public Piece getPiece() {
+        return piece;
+    }
+
+    public void setPiece(Piece piece) {
+        this.piece = piece;
+    }
 
     public String getColor() {
         return color;

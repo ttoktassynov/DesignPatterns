@@ -1,4 +1,4 @@
-package behavorial_patterns.visitor;
+package behavorial_patterns.visitor.good;
 
 public abstract class ChessComponent {
     private String name;

@@ -4,7 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomIterableCollection implements IterableCollection {
-    private List<String> data = new ArrayList<>();//1000 x 100 = 10 000 B
+    private List<String> data = new ArrayList<>();//1000 x 1000 = 1000 000 B
+
+    public List<String> getData() {
+        return data;
+    }
+
+    public void setData(List<String> data) {
+        this.data = data;
+    }
 
     public CustomIterableCollection(){
         data.add("Hello");

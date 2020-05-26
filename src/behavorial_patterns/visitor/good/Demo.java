@@ -1,10 +1,12 @@
-package behavorial_patterns.visitor;
+package behavorial_patterns.visitor.good;
 
 public class Demo {
 
     public static void main(String [] args){
         ChessComponent king = new Piece("king", "white");
-        ChessComponent blockComponent = new BoardBlock("block", "black", (Piece) king);
+        ChessComponent blockComponent = new BoardBlock("h2a2",
+                "black", (Piece) king);
+
         Visitor consoleApplicationVisitor =
                 new ConsoleApplicationVisitor();
 

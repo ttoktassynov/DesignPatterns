@@ -2,7 +2,7 @@ package behavorial_patterns.observer;
 
 public class DemoRadioStation {
     public static void main(String [] args){
-        RadioStation radio = new RadioStation();
+        Subject radio = new RadioStation();
         Observer observer1 = new Subscriber("John");
         Observer observer2 = new Subscriber("Matt");
         Observer observer3 = new Subscriber("Jackie");
@@ -12,6 +12,7 @@ public class DemoRadioStation {
         radio.registerObserver(observer2);
         radio.registerObserver(observer3);
         radio.registerObserver(observer4);
+
         radio.notifyObservers();
         System.out.println();
 
