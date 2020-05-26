@@ -9,6 +9,5 @@ public class PoliceCarHandler extends BaseHandler{
             return;
         }
         this.next.handle(vehicleType);
-
     }
 }

@@ -4,18 +4,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PrototypeRegistry {
-    private Map<String, Prototype> prototypRegistry;
+    private Map<String, Prototype> prototypeRegistry;
+
     public PrototypeRegistry(){
-        this.prototypRegistry = new HashMap<>();
+        this.prototypeRegistry = new HashMap<>();
     }
 
     public void addPrototypeRegistry(String prototypeName, Prototype prototype) {
-        this.prototypRegistry.put(prototypeName, prototype);
+        this.prototypeRegistry.put(prototypeName, prototype);
     }
 
     public Prototype getPrototypeCloneFromPrototypeRegistry(String prototypeName){
-        if (this.prototypRegistry.get(prototypeName) != null) {
-            return this.prototypRegistry.get(prototypeName).clone();
+        if (this.prototypeRegistry.get(prototypeName) != null) {
+            return this.prototypeRegistry.get(prototypeName).clone();
         }
         else{
             return new ConcretePrototype("empty");

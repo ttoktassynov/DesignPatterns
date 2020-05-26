@@ -6,6 +6,7 @@ public class AmbulanceHandler extends BaseHandler{
             System.out.println("let them go");
             return;
         }
-        throw new IllegalArgumentException("the vehicle is now allowed!");
+        super.handle(vehicleType);
+        //throw new IllegalArgumentException("the vehicle is now allowed!");
     }
 }

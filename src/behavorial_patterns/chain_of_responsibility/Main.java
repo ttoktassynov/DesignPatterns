@@ -5,7 +5,9 @@ public class Main {
         ChainManager manager = new ChainManager();
         Handler vehicleHandler = manager.getHeadHandler();
         vehicleHandler.handle("CivilianSUV");
+        System.out.println();
         vehicleHandler.handle("Fire-truck");
-
+        System.out.println();
+        vehicleHandler.handle("Business car");
     }
 }
