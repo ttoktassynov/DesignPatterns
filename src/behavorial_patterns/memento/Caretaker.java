@@ -28,6 +28,7 @@ public class Caretaker {
         currState--;
         return getMemento(currState);
     }
+
     public Memento redo(){
         System.out.println("Redoing the state:");
         if (currState >= history.size() - 1){

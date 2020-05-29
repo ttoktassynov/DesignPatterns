@@ -4,7 +4,7 @@ public class CollegeB implements College{
 
     @Override
     public void send(College college) {
-        String message = "hello friend!";
+        String message = "hi!";
         System.out.println("College B sent a message = " + message
                 + " to collegue A");
         college.receive(this, message);

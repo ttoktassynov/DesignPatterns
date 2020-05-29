@@ -10,6 +10,7 @@ public class ConcreteMediator implements Mediator{
     Map<String, Collegue> regCollege =
             new HashMap<>();
 
+
     private final String COLLEGE_A = "John";
     private final String COLLEGE_B = "Eric";
 
@@ -32,11 +33,17 @@ public class ConcreteMediator implements Mediator{
 
     private void reactOnA(String message){
         System.out.println("Mediator is in action: ");
-        regCollege.get(COLLEGE_B).receive(message);
+        if (regCollege.containsKey(COLLEGE_B)){
+            regCollege.get(COLLEGE_B).receive(message);
+        }
     }
     private void reactOnB(String message){
         System.out.println("Mediator is in action: ");
-        regCollege.get(COLLEGE_A).receive(message);
+        if (regCollege.containsKey(COLLEGE_A)){
+            regCollege.get(COLLEGE_A).receive(message);
+        }
+        if (regCollege.containsKey("Ben")){
+            regCollege.get("Ben").receive("a copy of message = " + message);
+        }
     }
-    //...///..//
 }

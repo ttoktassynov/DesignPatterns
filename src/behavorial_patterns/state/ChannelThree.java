@@ -1,0 +1,17 @@
+package behavorial_patterns.state;
+
+public class ChannelThree implements State{
+    private TvChannel tvChannel;
+    public ChannelThree(TvChannel channel){
+        this.tvChannel = channel;
+    }
+    @Override
+    public void transitionTo(State state) {
+        this.tvChannel.setCurrentState(state);
+    }
+
+    @Override
+    public void displayState() {
+        System.out.println("Channel 3");
+    }
+}

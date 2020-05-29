@@ -9,6 +9,9 @@ public abstract class Collegue {
     public String getName(){
         return this.name;
     }
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Collegue(String name, Mediator m){
         this.name = name;
@@ -16,6 +19,5 @@ public abstract class Collegue {
     }
     public abstract void send();
     public abstract void receive(String message);
-
 
 }
