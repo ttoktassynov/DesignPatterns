@@ -36,4 +36,7 @@ public class TvChannel {
         //this.currentState.transitionTo(tvChannels.get(curIndex % 3));
         this.currentState.transitionTo(tvChannelStateMap.get(currentState));
     }
+    public void toggle(State state){
+        this.setCurrentState(state);
+    }
 }

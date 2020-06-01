@@ -7,3 +7,4 @@ public class Duck implements Bird {
         System.out.println("Duck is making sound");
     }
 }
+

@@ -1,8 +1,8 @@
 package behavorial_patterns.state;
 
-public class OnState implements State{
+public class IntermediateState implements State{
     private LightBulb bulb;
-    public OnState(LightBulb bulb){
+    public IntermediateState(LightBulb bulb){
         this.bulb = bulb;
     }
 
@@ -13,6 +13,6 @@ public class OnState implements State{
 
     @Override
     public void displayState() {
-        System.out.println("The light bulb is on");
+        System.out.println("The light bulb is processing");
     }
 }

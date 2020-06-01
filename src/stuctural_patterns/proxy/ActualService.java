@@ -4,6 +4,6 @@ public class ActualService implements ServiceInterface {
 
     @Override
     public void performOperation(String url) {
-        System.out.println("Performing actual operation!");
+        System.out.println("The access has been granted to " + url + "!");
     }
 }
