@@ -6,8 +6,9 @@ public class Client {
         RedColor red = new RedColor();
         GreenColor green = new GreenColor();
 
-        Shape square = new Square(red, 4);
+        Shape square = new Square(green, 4);
         Shape rectangle = new Rectangle(yellow, 3, 4);
+
         square.paintShape();
         rectangle.paintShape();
     }

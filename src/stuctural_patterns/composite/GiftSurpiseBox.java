@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class GiftSurpiseBox implements SurpriseBox{
     private ArrayList<SurpriseBox> surpriseBoxes;
+
     public GiftSurpiseBox(){
         this.surpriseBoxes = new ArrayList<>();
     }

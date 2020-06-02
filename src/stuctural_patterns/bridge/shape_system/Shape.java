@@ -3,6 +3,7 @@ package stuctural_patterns.bridge.shape_system;
 public abstract class Shape {
     protected Color color;
     protected String shapeType;
+
     public Shape(Color color){
         this.color = color;
     }

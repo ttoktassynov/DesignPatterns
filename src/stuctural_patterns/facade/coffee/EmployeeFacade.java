@@ -1,4 +1,4 @@
-package stuctural_patterns.facade;
+package stuctural_patterns.facade.coffee;
 
 public class EmployeeFacade {
     private Driver driver;

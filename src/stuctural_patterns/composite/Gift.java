@@ -1,6 +1,6 @@
 package stuctural_patterns.composite;
 
-public class Gift implements SurpriseBox{
+public class Gift implements SurpriseBox{ //leaf
     private String giftName;
     public Gift(String name){
         this.giftName = name;

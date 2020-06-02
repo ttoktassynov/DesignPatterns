@@ -1,4 +1,4 @@
-package stuctural_patterns.facade;
+package stuctural_patterns.facade.coffee;
 
 public class Driver implements IDriver {
     @Override
