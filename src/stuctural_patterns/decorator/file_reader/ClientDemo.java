@@ -2,33 +2,24 @@ package stuctural_patterns.decorator.file_reader;
 
 public class ClientDemo {
     public static void main(String [] args){
-        Reader fileReader =
-                new FileReader("C:/test.txt");
-        fileReader.read();
+        Reader readerSimple = new FileReader("C:/first.java");
+        readerSimple.read();
+        System.out.println("====");
 
-        System.out.println("=========");
-        System.out.println();
+        Reader readerEncrypted = new EncryptedFileReader(new FileReader("C:/second.io"));
+        readerEncrypted.read();
+        System.out.println("=====");
 
-        Reader compressedFileReader =
-                new CompressedFileReader(fileReader);
-        compressedFileReader.read();
+        Reader readerCompressed = new CompressedFileReader(new FileReader("C:/third.zip"));
+        readerCompressed.read();
+        System.out.println("=====");
 
-        System.out.println("=========");
-        System.out.println();
-
-        Reader encryptedFileReader =
-                new EncryptedFileReader(fileReader);
-        encryptedFileReader.read();
-
-        System.out.println("=========");
-        System.out.println();
-
-        Reader encCompFileReader =
+        Reader readerMixed = new CompressedFileReader(
                 new EncryptedFileReader(
-                        new CompressedFileReader(
-                                new FileReader("C:/text2.txt")
-                        )
-                );
-        encCompFileReader.read();
+                        new FileReader("C:/fourth.zip")
+                )
+        );
+        readerMixed.read();
+        System.out.println("======");
     }
 }

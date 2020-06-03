@@ -5,10 +5,9 @@ public class EncryptedFileReader extends ReadDecorator{
     public EncryptedFileReader(Reader reader){
         super(reader);
     }
-
     @Override
     public void read() {
-        System.out.println("De-crypting file..");
-        this.reader.read();
+        System.out.println("De-crypting the file..");
+        reader.read();
     }
 }

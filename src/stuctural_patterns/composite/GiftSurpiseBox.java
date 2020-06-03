@@ -8,6 +8,7 @@ public class GiftSurpiseBox implements SurpriseBox{
     public GiftSurpiseBox(){
         this.surpriseBoxes = new ArrayList<>();
     }
+
     public void add(SurpriseBox box){
         this.surpriseBoxes.add(box);
     }
