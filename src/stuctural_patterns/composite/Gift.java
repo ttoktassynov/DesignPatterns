@@ -8,7 +8,6 @@ public class Gift implements SurpriseBox{ //leaf
 
     @Override
     public void unWrap() {
-        System.out.println("unwrapping gift " +
-                this.giftName);
+        System.out.println("Unwrapping the gift with name " + this.giftName);
     }
 }

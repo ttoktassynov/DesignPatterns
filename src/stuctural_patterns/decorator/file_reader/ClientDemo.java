@@ -6,20 +6,24 @@ public class ClientDemo {
         readerSimple.read();
         System.out.println("====");
 
-        Reader readerEncrypted = new EncryptedFileReader(new FileReader("C:/second.io"));
-        readerEncrypted.read();
-        System.out.println("=====");
-
-        Reader readerCompressed = new CompressedFileReader(new FileReader("C:/third.zip"));
+        Reader readerCompressed = new CompressedReadDecorator(
+                new FileReader("C:/second.zip")
+        );
         readerCompressed.read();
-        System.out.println("=====");
+        System.out.println("====");
 
-        Reader readerMixed = new CompressedFileReader(
-                new EncryptedFileReader(
-                        new FileReader("C:/fourth.zip")
+        Reader readerEncrypted = new EncryptedReadDecorator(
+                new FileReader("C:/third.abc")
+        );
+        readerEncrypted.read();
+        System.out.println("====");
+
+        Reader mixedReader = new EncryptedReadDecorator(
+                new CompressedReadDecorator(
+                        new FileReader("C:/fourth.zip.xyz")
                 )
         );
-        readerMixed.read();
-        System.out.println("======");
+        mixedReader.read();
+        System.out.println("====");
     }
 }

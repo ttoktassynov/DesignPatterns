@@ -3,25 +3,22 @@ package stuctural_patterns.composite;
 public class ClientDemo {
     public static void main(String [] args){
         GiftSurpiseBox giftBoxForJake = new GiftSurpiseBox();
-        GiftSurpiseBox subGiftBox = new GiftSurpiseBox();
-        GiftSurpiseBox subGiftBox2 = new GiftSurpiseBox();
         GiftSurpiseBox giftBoxForMasha = new GiftSurpiseBox();
 
-        Gift giftCar = new Gift("Toy car");
+        GiftSurpiseBox subGiftBoxJake = new GiftSurpiseBox();
+        GiftSurpiseBox subGiftBoxMasha = new GiftSurpiseBox();
+
+        Gift giftDoll = new Gift("Toy doll");
         Gift giftPlane = new Gift("Toy plane");
 
-        giftBoxForJake.add(subGiftBox);
-        subGiftBox.add(giftCar);
+        subGiftBoxJake.add(giftPlane);
+        subGiftBoxMasha.add(giftDoll);
 
-        giftBoxForMasha.add(subGiftBox2);
-        subGiftBox2.add(giftPlane);
+        giftBoxForJake.add(subGiftBoxJake);
+        giftBoxForMasha.add(subGiftBoxMasha);
 
-        System.out.println("Jake is receiving presents");
         giftBoxForJake.unWrap();
-        System.out.println("====");
-
-        System.out.println("Masha is receiving presents");
         giftBoxForMasha.unWrap();
-        System.out.println("====");
+
     }
 }

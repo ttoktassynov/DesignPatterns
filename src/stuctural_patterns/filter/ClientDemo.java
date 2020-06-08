@@ -6,15 +6,16 @@ import java.util.List;
 public class ClientDemo {
     public static void main(String [] args){
         List<Employee> employeeList = new ArrayList<>();
+
         employeeList.add(new Employee("Oleg", "Male", "Senior"));
-        employeeList.add(new Employee("Timur", "Male", "Junior"));
+        employeeList.add(new Employee("Timur", "Male", "Junior"));//+
         employeeList.add(new Employee("Tatyana", "Female", "Junior"));
-        employeeList.add(new Employee("Jane", "Female", "Senior"));
+        employeeList.add(new Employee("Jane", "Female", "Senior"));//+
         employeeList.add(new Employee("Pat", "Male", "Senior"));
-        employeeList.add(new Employee("Vlad", "Male", "Junior"));
-        employeeList.add(new Employee("Gia", "Female", "Senior"));
+        employeeList.add(new Employee("Vlad", "Male", "Junior"));//+
+        employeeList.add(new Employee("Gia", "Female", "Senior"));//+
         employeeList.add(new Employee("Sveta", "Female", "Junior"));
-        employeeList.add(new Employee("Serik", "Male", "Junior"));
+        employeeList.add(new Employee("Serik", "Male", "Junior"));//+
         employeeList.add(new Employee("Mark", "Male", "Senior"));
 
         Criteria femaleCriteria = new CriteriaFemale();

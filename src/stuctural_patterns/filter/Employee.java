@@ -1,9 +1,9 @@
 package stuctural_patterns.filter;
 
 public class Employee {
-    private String name;
-    private String gender;
-    private String position;
+    private String name; // ..
+    private String gender; // Male or Female
+    private String position; // Junior or Senior
 
     public Employee(String name, String gender, String position){
         this.name = name;

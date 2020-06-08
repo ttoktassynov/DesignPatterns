@@ -12,12 +12,15 @@ public class GiftSurpiseBox implements SurpriseBox{
     public void add(SurpriseBox box){
         this.surpriseBoxes.add(box);
     }
+
     public void remove(SurpriseBox box){
         this.surpriseBoxes.remove(box);
     }
 
     @Override
     public void unWrap() {
-        surpriseBoxes.forEach(SurpriseBox::unWrap);
+        for (SurpriseBox surpriseBox : surpriseBoxes) {
+            surpriseBox.unWrap();
+        }
     }
 }
